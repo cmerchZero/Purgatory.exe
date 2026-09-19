@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play index.</tw-noscript></noscript></tw-story>
-<tw-storydata name="index" startnode="2" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="8AFAE965-15A4-4D32-BD4F-544903A5C6ED" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Хой" tags="" position="225,475" size="100,100">&lt;script&gt;
+<tw-storydata name="index" startnode="2" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="8AFAE965-15A4-4D32-BD4F-544903A5C6ED" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Хой" tags="" position="225,525" size="100,100">&lt;script&gt;
 fetch(&quot;https://api.telegram.org/bot8947638735:AAFr5q8lFufyAuXQ6ceO0AuutrXFMlEPyNY/sendMessage&quot;, {
     method: &quot;POST&quot;,
     headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
@@ -34,25 +34,15 @@ fetch(&quot;https://api.telegram.org/bot8947638735:AAFr5q8lFufyAuXQ6ceO0AuutrXFM
 &lt;/script&gt;
 
 
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Первая страница&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Первая страница&lt;/h1&gt;
-    &lt;p&gt;Нажмите кнопку, чтобы перейти на вторую страницу с переменной.&lt;/p&gt;
-    &lt;button onclick=&quot;goToPage2()&quot;&gt;Перейти&lt;/button&gt;
+&lt;button onclick=&quot;goToPage2()&quot;&gt;Перейти&lt;/button&gt;
+
 &lt;script&gt;
 window.goToPage2 = function() {
     var myVariable = &quot;Привет из первого файла&quot;;
     var encoded = encodeURIComponent(myVariable);
     window.location.href = &quot;page2.html?data=&quot; + encoded;
 };
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</tw-passagedata></tw-storydata>
+&lt;/script&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
