@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Title.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Title" startnode="5" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="3D4F5449-03A5-46ED-804C-28AD921422C8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body, tw-story {
+<tw-storydata name="Title" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="3D4F5449-03A5-46ED-804C-28AD921422C8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body, tw-story {
     background-color: #000000 !important;
     color: #33ff33 !important;
     font-family: "Courier New", Courier, monospace !important;
@@ -76,7 +76,52 @@ tw-story::after {
     (link: "Текст")[
         (goto: "Нужный passage")
     ]
-</span></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Purgatory.exe" tags="" position="175,175" size="100,100">(set: $enteredID to &quot;&quot;)\
+</span>
+
+
+
+.trials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.trial-card {
+    border: 1px solid #ffdd00;
+    padding: 16px 20px;
+    width: 180px;
+    text-align: center;
+    background: rgba(255, 221, 0, 0.05);
+}
+
+.trial-title {
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.trial-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffdd00;
+    margin-bottom: 10px;
+}
+
+.trial-status {
+    font-size: 0.7em;
+    letter-spacing: 0.5px;
+    opacity: 0.85;
+}
+
+.status-done {
+    color: #33ff33;
+}
+
+.status-dev {
+    color: #ff9900;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Purgatory.exe" tags="" position="175,200" size="100,100">(set: $enteredID to &quot;&quot;)\
 &lt;div style=&quot;text-align: center;&quot;&gt;\
 &lt;div style=&quot;font-size: 110%;&quot;&gt;\
     ДОБРО ПОЖАЛОВАТЬ В
@@ -156,21 +201,48 @@ Purgatory.exe — это уникальная программа, установ
     (else:)[\
         Неверный идентификатор\
     ]\
-]</tw-passagedata><tw-passagedata pid="2" name="Главное меню" tags="" position="450,300" size="100,100">хуо</tw-passagedata><tw-passagedata pid="3" name="Регистрация" tags="" position="300,150" size="100,100">Мы признательны вам в вашем стремлении. Просто введите свои данные для регистрации.
+]</tw-passagedata><tw-passagedata pid="2" name="Главное меню" tags="" position="300,300" size="100,100">&lt;div style=&quot;display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 90vh; text-align: center;&quot;&gt;\
+&lt;div style=&quot;font-size: 200%; margin-bottom: 20px;&quot;&gt;\
+    ГЛАВНОЕ МЕНЮ
+&lt;/div&gt;
+
+&lt;div style=&quot;display: flex; flex-direction: column; gap: 16px; align-items: center;&quot;&gt;
+
+    &lt;div class=&quot;trial-card&quot;&gt;
+        &lt;div class=&quot;trial-title&quot;&gt;Испытание №1&lt;/div&gt;
+        &lt;div class=&quot;trial-name&quot;&gt;Дилемма кнопок&lt;/div&gt;
+        &lt;div class=&quot;trial-status status-done&quot;&gt;Статус: завершено&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;trial-card&quot;&gt;
+        &lt;div class=&quot;trial-title&quot;&gt;Испытание №2&lt;/div&gt;
+        &lt;div class=&quot;trial-name&quot;&gt;Особняк-ловушка&lt;/div&gt;
+        &lt;div class=&quot;trial-status status-done&quot;&gt;Статус: (text-colour:red)[выполняется]&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;trial-card&quot;&gt;
+        &lt;div class=&quot;trial-title&quot;&gt;Испытание №3&lt;/div&gt;
+        &lt;div class=&quot;trial-name&quot;&gt;???&lt;/div&gt;
+        &lt;div class=&quot;trial-status status-dev&quot;&gt;Статус: в разработке&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Регистрация" tags="" position="300,150" size="100,100">Мы признательны вам в вашем стремлении. Просто введите свои данные для регистрации.
 
 Как нам вас звать?
 
 &lt;input type=&quot;text&quot; id=&quot;regNameHtml&quot; class=&quot;id-input&quot; placeholder=&quot;Введите имя&quot;&gt;
 
 Где нам найти вас?
-(align: &quot;==&gt;&quot;)[
-    (text-style: &quot;italic&quot;)[
-    (text-size: 0.5)[
+(align: &quot;==&gt;&quot;)[\
+    (text-style: &quot;italic&quot;)[\
+    (text-size: 0.5)[\
         Вы чувствуете, как загадочная сущность шепчет вам:
         «Впиши свой тг юзернейм, что написан после @ в твоём профиле»
-        ]
-    ]
-]
+        ]\
+    ]\
+]\
 
 &lt;input type=&quot;text&quot; id=&quot;telegramHtml&quot; class=&quot;id-input&quot; placeholder=&quot;@username&quot;&gt;
 
@@ -221,7 +293,7 @@ try {
 }
 &lt;/script&gt;
 
-Спасибо за ответы! Мы уведомим вас о результатах голосования, которое проведём, как только подтвердим вашу личность!</tw-passagedata><tw-passagedata pid="5" name="Untitled Passage" tags="" position="150,300" size="100,100">[[Purgatory.exe]]</tw-passagedata></tw-storydata>
+Спасибо за ответы! Мы уведомим вас о результатах голосования, которое проведём, как только подтвердим вашу личность!</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
